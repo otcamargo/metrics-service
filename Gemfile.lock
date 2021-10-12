@@ -85,6 +85,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.14.4)
+    mqtt (0.5.0)
     msgpack (1.4.2)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
@@ -156,6 +157,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   listen (~> 3.3)
+  mqtt (~> 0.5.0)
   pg (~> 1.1)
   prometheus-client (~> 2.1)
   pry (~> 0.14.1)
