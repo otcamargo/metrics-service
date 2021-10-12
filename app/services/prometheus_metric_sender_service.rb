@@ -3,10 +3,10 @@ class PrometheusMetricSenderService
 
   attr_reader :name, :value, :origin
 
-  def initialize(params)
-    @name = params[:name]
-    @value = params[:value]
-    @origin = params[:origin]
+  def initialize(name, value, origin)
+    @name = name
+    @value = value
+    @origin = origin
   end
 
   def execute
