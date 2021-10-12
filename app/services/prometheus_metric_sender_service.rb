@@ -19,7 +19,6 @@ class PrometheusMetricSenderService
     else
       export_to_iot_gauge(value, origin, name)
     end
-
   end
 
   private
