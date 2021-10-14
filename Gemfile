@@ -42,3 +42,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "prometheus-client", "~> 2.1"
 
 gem "pry", "~> 0.14.1"
+
+gem "mqtt", "~> 0.5.0"

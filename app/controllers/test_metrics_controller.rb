@@ -1,6 +1,6 @@
 class TestMetricsController < ApplicationController
   def create
-    PrometheusMetricSenderService.new(permitted_params.merge(origin: 'api')).execute
+    PrometheusMetricSenderService.new(params[:name], params[:value], 'api').execute
 
     render json: { status: "ok" }
   end
