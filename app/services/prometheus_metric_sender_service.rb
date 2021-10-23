@@ -1,5 +1,5 @@
 class PrometheusMetricSenderService
-  include Prometheus::General
+  include Prometheus
 
   attr_reader :name, :value, :origin
 
