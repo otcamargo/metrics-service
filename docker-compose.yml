@@ -1,0 +1,21 @@
+---
+version: "3.8"
+services:
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./opt/app/db
+    ports:
+      - "5000:5000"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      /bin/sh -c "DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bundle exec rake db:setup && if [ -e "/opt/app/tmp/pids/server.pid" ]; then rm /opt/app/tmp/pids/server.pid; fi && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/opt/app
+    ports: 
+      - "3001:3000"
